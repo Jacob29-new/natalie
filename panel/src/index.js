@@ -9,17 +9,17 @@ const port = 3000;
 
 app.use(express.json());
 app.use(cors());
-
-app.use(express.static(path.resolve(__dirname, '../../vite-project/dist')));
-
-app.get('*', (req, res) => {
-  res.sendFile(path.resolve(__dirname, '../../vite-project/dist', 'index.html'));
+app.use(express.static(path.resolve(__dirname, 'vite-project/dist')));
+app.get("/", (req, res) => {
+  res.sendFile(path.resolve(__dirname, 'vite-project/dist', 'index.html'));
 });
 
-app.get('/', (req, res) => {
-    res.sendFile(path.resolve(__dirname, '../../vite-project/dist', 'index.html'));
-  });
+console.log("third change confirmed")
 
+console.log("second change confirmed")
+app.get("/api/data", (req, res) => {
+  res.json({ message: "Here is your data!" });
+});
 console.log("this is the synced server")
 
 let visitorCount = 0

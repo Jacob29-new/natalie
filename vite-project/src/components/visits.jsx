@@ -14,7 +14,7 @@ function Visits() {
 
     useEffect(() => {
 
-        fetch('http://localhost:3000/visit')
+        fetch('http://95.111.232.71:3000/visit')
             .then((response) => response.json())
             .then((data) => {
                 setVisitCountAllTime(data.visitCount)

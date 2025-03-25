@@ -70,7 +70,7 @@ function createNewYear(year) {
 }
 
 function incrementCount() {
-    fetch("http://localhost:3000/increment", {
+    fetch("http://95.111.232.71:3000/increment", {
         method: "POST",
         headers: { "Content-Type":"application/json" },
     }).then(data => data.json())
@@ -80,7 +80,7 @@ function incrementCount() {
 }
 
 function getYears() {
-    fetch("http://localhost:3000/getyear", {
+    fetch("http://95.111.232.71:3000/getyear", {
         method: "GET",
         headers: { "Content-Type":"application/json" },
     }).then(data => data.json())
@@ -125,7 +125,7 @@ function fetchItems(year) {
     
     const data = { year }
 
-    fetch("http://localhost:3000/load", {
+    fetch("http://95.111.232.71:3000/load", {
         method: "POST",
         headers: { "Content-Type":"application/json" },
         body: JSON.stringify(data),

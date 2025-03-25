@@ -18,7 +18,7 @@ function Settings() {
         const stringedDate = date.toString()
         const data = { year: stringedDate }
 
-        fetch("http://localhost:3000/addyear", {
+        fetch("http://95.111.232.71:3000/addyear", {
             method: "POST",
             headers: { "Content-Type":"application/json" },
             body: JSON.stringify(data),
@@ -29,7 +29,7 @@ function Settings() {
     }
 
     function getYears() {
-        fetch("http://localhost:3000/getyear", {
+        fetch("http://95.111.232.71:3000/getyear", {
           method: "GET",
           headers: { "Content-Type": "application/json" },
         })
@@ -48,7 +48,7 @@ function Settings() {
 
         const data = {year: year}
 
-        fetch("http://localhost:3000/removeyear", {
+        fetch("http://95.111.232.71:3000/removeyear", {
             method: "POST",
             headers: { "Content-Type":"application/json" },
             body: JSON.stringify(data),

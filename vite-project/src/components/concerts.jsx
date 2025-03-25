@@ -64,7 +64,7 @@ function Concerts() {
 
     function fetchItems() {
     
-        fetch("http://localhost:3000/loadall", {
+        fetch("http://95.111.232.71:3000/loadall", {
             method: "GET",
             headers: { "Content-Type":"application/json" },
         }).then(data => data.json())
@@ -79,7 +79,7 @@ function Concerts() {
 
         changeShow(false)
 
-        fetch("http://localhost:3000/create", {
+        fetch("http://95.111.232.71:3000/create", {
             method: "POST",
             headers: { "Content-Type":"application/json" },
             body: JSON.stringify(data),
@@ -100,7 +100,7 @@ function Concerts() {
 
         changeShowDelete(false)
 
-        fetch("http://localhost:3000/delete", {
+        fetch("http://95.111.232.71:3000/delete", {
             method: "POST",
             headers: { "Content-Type":"application/json" },
             body: JSON.stringify({ name }),
